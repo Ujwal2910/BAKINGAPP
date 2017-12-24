@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_step"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/step_name"
+            style="@style/AppTheme.Headline.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:textColor="#00BBC4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Recipe Titles" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

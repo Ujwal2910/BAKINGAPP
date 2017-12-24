@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_before"
+        android:layout_marginBottom="8dp"
+        android:textAppearance="@style/AppTheme.Headline.Inverse"
+        android:textColor="@color/colorAccent"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:text="@string/selction" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_before"
+        android:src="@drawable/khana"/>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_radio_buttons"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:padding="10dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+    <!--</LinearLayout>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/widget_add_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="@string/widget_add" />-->
+
+</RelativeLayout>
