@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.List;
@@ -24,11 +26,23 @@ public class ThirdScreen extends AppCompatActivity {
     public FragmentVideo fragmentVideo2;
     public FragmentDesc fragmentDesc2;
     public FloatingActionButton prevFAB, nextFAB;
+    public Toolbar toolbar ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.third_screen);
+
+        toolbar = (Toolbar)findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
+
+        if (getSupportActionBar()!=null)
+        {
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        }
 
         Intent i = getIntent();
         pos = i.getIntExtra("pos", -1);
@@ -128,5 +142,11 @@ public class ThirdScreen extends AppCompatActivity {
             nextFAB.setEnabled(true);
             nextFAB.setVisibility(View.VISIBLE);
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
     }
 }

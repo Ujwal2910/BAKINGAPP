@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
 //        ButterKnife.bind(this);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_recipe);
         mError = (TextView) findViewById(R.id.error_text);

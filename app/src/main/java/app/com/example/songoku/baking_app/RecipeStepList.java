@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,12 +28,21 @@ public class RecipeStepList  extends AppCompatActivity implements StepAdapter.St
     private ArrayList<Step_Contract> steps;
     private boolean mTwoPane;
     public FragmentManager fragmentManager;
+    public Toolbar toolbar ;
 //    public Fragment fragmentVideo, fragmentDesc;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recipe_detail);
+        toolbar = (Toolbar)findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
+
+        if (getSupportActionBar()!=null)
+        {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
 
         steps = getIntent().getParcelableArrayListExtra("Step");
 
@@ -140,5 +150,12 @@ public class RecipeStepList  extends AppCompatActivity implements StepAdapter.St
                     .replace(R.id.description_container, fragmentDesc)
                     .commit();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
     }
 }

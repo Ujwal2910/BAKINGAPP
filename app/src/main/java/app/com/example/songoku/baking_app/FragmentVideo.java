@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.exoplayer2.DefaultLoadControl;
@@ -40,6 +41,7 @@ public class FragmentVideo extends Fragment {
     private int currentWindow;
     private long playbackPosition;
     private boolean playWhenReady = true;
+    public ImageView novideo;
 
     public FragmentVideo() {}
 
@@ -56,10 +58,15 @@ public class FragmentVideo extends Fragment {
 
         thumbnailURL = getArguments().getString("bThumb");
         videoURL = getArguments().getString("bVideo");
+        novideo= (ImageView) rootView.findViewById(R.id.no_video_image);
 
         simpleExoPlayerView = (SimpleExoPlayerView) rootView.findViewById(R.id.fragment_video_player);
         if(videoURL == null) {
-            simpleExoPlayerView.setDefaultArtwork(BitmapFactory.decodeFile(thumbnailURL));
+//            simpleExoPlayerView.setDefaultArtwork(BitmapFactory.decodeFile(thumbnailURL));
+//            simpleExoPlayerView.setDefaultArtwork(getResources().getDrawable(R.drawable.no_video));
+            simpleExoPlayerView.setVisibility(View.GONE);
+            novideo.setVisibility(View.VISIBLE);
+            novideo.setImageResource(R.drawable.no_video);
         }
 
         return rootView;
