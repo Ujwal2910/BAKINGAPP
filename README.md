@@ -1,4 +1,3 @@
 # BAKINGAPP
 Udacity Baking App Project
-[Settings Window](https://raw.github.com/Ujwa2910/BAKINGAPP/Screenshots/Screenshot_20171225-070415.png
-)
+https://user-images.githubusercontent.com/19718533/34330532-de350f58-e943-11e7-904f-2f46c3ee1e00.png
