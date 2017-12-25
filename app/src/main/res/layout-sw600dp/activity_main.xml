@@ -4,14 +4,12 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
     tools:context=".MainActivity">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black_100"
         android:id="@+id/recycler_view_recipe">
 
     </android.support.v7.widget.RecyclerView>

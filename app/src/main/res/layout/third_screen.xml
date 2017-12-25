@@ -1,10 +1,19 @@
+<android.support.design.widget.CoordinatorLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_100"
     android:orientation="vertical">
-
-    <include layout="@layout/toolbar"/>
 
     <FrameLayout
         android:id="@+id/video_container"
@@ -33,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:backgroundTint="#B24A60"
            android:src="@drawable/ic_navigate_before_black_24dp"
             android:layout_margin="8dp"/>
 
@@ -40,6 +50,7 @@
             android:id="@+id/nect_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#B24A60"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_navigate_next_black_24dp"
             android:layout_margin="8dp"/>
@@ -47,3 +58,4 @@
     </RelativeLayout>
 
 </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

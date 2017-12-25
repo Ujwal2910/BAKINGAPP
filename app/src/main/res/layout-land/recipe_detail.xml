@@ -1,12 +1,21 @@
+<android.support.design.widget.CoordinatorLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black_100"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-    <include layout="@layout/toolbar"/>
 
     <android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_below="@+id/toolbar_main"
-        app:cardBackgroundColor="#80CBC4"
+        app:cardBackgroundColor="@color/grey_700"
         card_view:cardCornerRadius="6dp"
         card_view:cardElevation="20dp">
 
@@ -34,22 +43,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
+                android:fontFamily="sans-serif"
                 android:textSize="17sp"
+                android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
-                android:text="Ingredients"
-                android:textColor="#fff" />
+                android:text="@string/ingredients"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/tv_ingredients_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:fontFamily="casual"
-                android:text="ingredient list here"
+                android:fontFamily="monospace"
+                android:text="@string/ingre_list"
                 android:lineSpacingMultiplier="1.3"
                 android:padding="3dp"
-                android:textColor="#fff" />
+                android:textColor="@color/white" />
 
 
 
@@ -62,7 +72,9 @@
         android:id="@+id/rv_recipe_steps"
         android:layout_toRightOf="@+id/ingredients_card"
         android:layout_width="match_parent"
+        android:background="@color/black_100"
         android:layout_below="@+id/toolbar_main"
         android:layout_height="match_parent" />
 
 </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

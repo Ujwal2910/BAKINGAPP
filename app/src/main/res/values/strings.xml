@@ -4,4 +4,6 @@
     <string name="widget_add">Add Widget</string>
     <string name="widget_configure">Recipe Selection</string>
     <string name="selction">Open Main App First</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="ingre_list">ingredient list here</string>
 </resources>

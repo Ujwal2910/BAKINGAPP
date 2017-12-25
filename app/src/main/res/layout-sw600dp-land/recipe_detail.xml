@@ -1,3 +1,13 @@
+<android.support.design.widget.CoordinatorLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -5,6 +15,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="@color/black_100"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
@@ -22,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:cardBackgroundColor="#80CBC4"
+            app:cardBackgroundColor="@color/grey_700"
             card_view:cardCornerRadius="6dp"
             card_view:cardElevation="20dp">
 
@@ -35,12 +46,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif"
                     android:textSize="17sp"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:text="Ingredients"
-                    android:textColor="#fff" />
+                    android:text="@string/ingredients"
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/tv_ingredients_list"
@@ -48,11 +59,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:fontFamily="casual"
+                    android:fontFamily="monospace"
                     android:text="ingredient list here"
                     android:lineSpacingMultiplier="1.2"
                     android:padding="8dp"
-                    android:textColor="#fff" />
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
@@ -61,6 +72,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_recipe_steps"
             android:padding="16dp"
+            android:background="@color/black_100"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -96,3 +108,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
